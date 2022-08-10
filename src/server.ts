@@ -48,9 +48,8 @@ import {filterImageFromURL, deleteLocalFiles} from './util/util';
         //    4. deletes any files on the server on finish of the response
         deleteLocalFiles([file]);
       });      
-    } catch (error) {
-      console.log(error) //delete
-      return res.status(422).send("invalid image url");
+    } catch (error) {      
+      return res.status(422).send("Invalid image url");
     }    
   });
   // Root Endpoint
